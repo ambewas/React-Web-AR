@@ -5,7 +5,9 @@
   "main": "build/react-ar.min.js",
   "author": "Nitin Tulswani",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -27,13 +29,13 @@
     "aframe-react": "^4.3.0"
   },
   "scripts": {
-    "precommit": "lint-staged",
-    "build":
-      "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js --progress",
-    "start":
-      "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --content-base ./public --hot --config ./webpack/webpack.config.dev.js"
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js --progress",
+    "start": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --content-base ./public --hot --config ./webpack/webpack.config.dev.js"
   },
   "lint-staged": {
-    "*.{js,json,css}": ["prettier --write", "git add"]
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

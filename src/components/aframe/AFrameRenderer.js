@@ -31,19 +31,19 @@ const PARAMETERS = [
 
 /**
  * AFrameRenderer
- * 
+ *
  * Render aframe.io primitives using a single marker
- * 
+ *
  * Use multiple markers (independent) and render different objects
- * 
+ *
  * Use camera as an entity or use cameraTransformMatrix (camera movement)
- *  
- * Can also render aframe.io bindings for React (WebVR) 
+ *
+ * Can also render aframe.io bindings for React (WebVR)
  *
  * Bugs/Errors to patch:
- * 
+ *
  * AR.js gives this error 'THREEx.ArMarkerControls: 'markersAreaEnabled' is not a property of this material.'
- * 
+ *
  * Why ?
  * - Composition
  * - DRY code
@@ -93,7 +93,7 @@ export default class AFrameRenderer extends Component {
   // Clear the rendering context
   // Fallback if <a-scene /> primitive fails to dispose the renderer
   componentWillUnmount = () => {
-    this.renderer && this.renderer.dispose();
+    this.renderer && this.renderer.dispose && this.renderer.dispose();
   };
 
   // Pass <a-scene /> reference as a prop. Useful for usage with aframe.io APIs
